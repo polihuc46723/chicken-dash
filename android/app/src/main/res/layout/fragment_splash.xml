@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/splash_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_splash">
+
+    <ImageView
+        android:id="@+id/splash_bg"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:alpha="0.22"
+        android:contentDescription="@string/cd_background"
+        android:scaleType="centerCrop"
+        android:src="@drawable/bg_game"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/splash_grid"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:alpha="0.85"
+        android:importantForAccessibility="no"
+        android:scaleType="centerCrop"
+        android:src="@drawable/tile_dot_grid"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/splash_accent_top"
+        android:layout_width="96dp"
+        android:layout_height="96dp"
+        android:layout_marginStart="26dp"
+        android:layout_marginTop="86dp"
+        android:alpha="0"
+        android:importantForAccessibility="no"
+        android:scaleType="fitCenter"
+        android:src="@drawable/sprite_1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/splash_accent_right"
+        android:layout_width="88dp"
+        android:layout_height="88dp"
+        android:layout_marginTop="150dp"
+        android:layout_marginEnd="22dp"
+        android:alpha="0"
+        android:importantForAccessibility="no"
+        android:scaleType="fitCenter"
+        android:src="@drawable/sprite_3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/splash_accent_bottom"
+        android:layout_width="104dp"
+        android:layout_height="104dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginBottom="74dp"
+        android:alpha="0"
+        android:importantForAccessibility="no"
+        android:scaleType="fitCenter"
+        android:src="@drawable/sprite_5"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <ImageView
+        android:id="@+id/splash_logo"
+        android:layout_width="@dimen/logo_splash"
+        android:layout_height="@dimen/logo_splash"
+        android:contentDescription="@string/cd_logo"
+        android:scaleType="fitCenter"
+        android:src="@drawable/logo"
+        app:layout_constraintBottom_toTopOf="@id/splash_title"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="packed" />
+
+    <TextView
+        android:id="@+id/splash_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="26dp"
+        android:text="@string/splash_title"
+        android:textAppearance="@style/TextAppearance.App.Display"
+        app:layout_constraintBottom_toTopOf="@id/splash_tagline"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/splash_logo" />
+
+    <TextView
+        android:id="@+id/splash_tagline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:letterSpacing="0.22"
+        android:text="@string/splash_tagline"
+        android:textAppearance="@style/TextAppearance.App.Label"
+        android:textSize="13sp"
+        app:layout_constraintBottom_toTopOf="@id/splash_progress"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/splash_title" />
+
+    <com.google.android.material.progressindicator.LinearProgressIndicator
+        android:id="@+id/splash_progress"
+        android:layout_width="@dimen/splash_progress_width"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:indeterminate="true"
+        app:indicatorColor="@color/primary_blue"
+        app:layout_constraintBottom_toTopOf="@id/splash_loading"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/splash_tagline"
+        app:trackColor="#FFDDE6F7"
+        app:trackCornerRadius="2dp"
+        app:trackThickness="4dp" />
+
+    <TextView
+        android:id="@+id/splash_loading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="14dp"
+        android:letterSpacing="0.3"
+        android:text="@string/splash_loading"
+        android:textAppearance="@style/TextAppearance.App.Label"
+        android:textColor="@color/ink_disabled"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/splash_progress" />
+
+    <View
+        android:id="@+id/splash_hairline"
+        android:layout_width="150dp"
+        android:layout_height="2dp"
+        android:layout_marginBottom="44dp"
+        android:background="@drawable/hairline_mint"
+        android:importantForAccessibility="no"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

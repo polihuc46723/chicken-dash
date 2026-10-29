@@ -1,0 +1,8 @@
+{
+  "outcome": "running",
+  "fix_type": "transient",
+  "resume_from": "codegen",
+  "message": "Resuming from codegen (transient)…",
+  "log": "projects/ChickenDash/.resume-20261029-132930.log",
+  "attempted_at_epoch": 1793276971
+}

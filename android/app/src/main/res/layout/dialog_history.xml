@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/history_root"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="@dimen/screen_margin">
+
+    <LinearLayout
+        android:id="@+id/history_card"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/surface_dialog"
+        android:orientation="vertical"
+        android:padding="@dimen/dialog_padding">
+
+        <TextView
+            android:id="@+id/history_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/dialog_history_title"
+            android:textAppearance="@style/TextAppearance.App.Title" />
+
+        <androidx.core.widget.NestedScrollView
+            android:id="@+id/history_scroll"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:maxHeight="420dp">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/history_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:nestedScrollingEnabled="false" />
+
+        </androidx.core.widget.NestedScrollView>
+
+        <LinearLayout
+            android:id="@+id/history_empty"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:paddingTop="18dp"
+            android:paddingBottom="18dp"
+            android:visibility="gone">
+
+            <ImageView
+                android:id="@+id/history_empty_art"
+                android:layout_width="96dp"
+                android:layout_height="96dp"
+                android:alpha="0.25"
+                android:importantForAccessibility="no"
+                android:scaleType="fitCenter"
+                android:src="@drawable/sprite_3" />
+
+            <TextView
+                android:id="@+id/history_empty_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:gravity="center"
+                android:text="@string/dialog_history_empty"
+                android:textAppearance="@style/TextAppearance.App.Body" />
+
+        </LinearLayout>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/history_close"
+            style="@style/Widget.App.Button.Secondary"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/secondary_height"
+            android:layout_marginTop="16dp"
+            android:insetTop="0dp"
+            android:insetBottom="0dp"
+            android:text="@string/dialog_history_close" />
+
+    </LinearLayout>
+
+</RelativeLayout>

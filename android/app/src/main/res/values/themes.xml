@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Theme.ChickenDash" parent="Theme.Material3.Light.NoActionBar">
+        <item name="colorPrimary">@color/primary_blue</item>
+        <item name="colorOnPrimary">@color/surface_white</item>
+        <item name="colorPrimaryContainer">@color/primary_blue_soft</item>
+        <item name="colorOnPrimaryContainer">@color/primary_blue</item>
+        <item name="colorSecondary">@color/accent_mint</item>
+        <item name="colorOnSecondary">@color/ink_primary</item>
+        <item name="colorSecondaryContainer">@color/accent_mint_soft</item>
+        <item name="colorOnSecondaryContainer">@color/ink_primary</item>
+        <item name="colorError">@color/state_coral</item>
+        <item name="android:colorBackground">@color/surface_white</item>
+        <item name="colorSurface">@color/surface_white</item>
+        <item name="colorSurfaceVariant">@color/field_cool</item>
+        <item name="colorOnSurface">@color/ink_primary</item>
+        <item name="colorOnSurfaceVariant">@color/ink_secondary</item>
+        <item name="colorOutline">@color/stroke_hair</item>
+        <item name="android:windowBackground">@drawable/bg_splash_window</item>
+        <item name="android:statusBarColor">@color/splash_top</item>
+        <item name="android:navigationBarColor">@color/surface_white</item>
+        <item name="android:windowLightStatusBar">true</item>
+        <item name="android:textColorPrimary">@color/ink_primary</item>
+        <item name="android:textColorSecondary">@color/ink_secondary</item>
+    </style>
+
+    <style name="Theme.ChickenDash.Dialog" parent="Theme.Material3.Light.Dialog">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:backgroundDimAmount">0.45</item>
+        <item name="colorPrimary">@color/primary_blue</item>
+        <item name="colorOnPrimary">@color/surface_white</item>
+        <item name="colorSurface">@color/surface_white</item>
+        <item name="colorOnSurface">@color/ink_primary</item>
+    </style>
+</resources>

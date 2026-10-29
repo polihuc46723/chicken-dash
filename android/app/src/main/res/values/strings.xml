@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Number Garden</string>
+
+    <string name="splash_title">NUMBER GARDEN</string>
+    <string name="splash_tagline">GROW NUMBERS INTO BLOOMS</string>
+    <string name="splash_loading">LOADING</string>
+
+    <string name="menu_greeting_caption">GOOD TO SEE YOU</string>
+    <string name="menu_greeting">Your garden is waiting</string>
+    <string name="menu_greeting_named">Welcome back, %1$s</string>
+    <string name="menu_hint">Match two tiles that add up to the bloom number</string>
+    <string name="menu_cta">PLAY</string>
+    <string name="menu_history">HISTORY</string>
+    <string name="menu_settings">SETTINGS</string>
+    <string name="menu_rules">GARDEN RULES</string>
+
+    <string name="label_streak">STREAK</string>
+    <string name="label_best">BEST</string>
+    <string name="label_blooms">BLOOMS</string>
+    <string name="label_best_pair">BEST PAIR</string>
+    <string name="label_accuracy">ACCURACY</string>
+    <string name="label_best_combo">BEST COMBO</string>
+    <string name="label_time">TIME</string>
+    <string name="label_score">SCORE</string>
+    <string name="label_daily_goal">DAILY GOAL</string>
+    <string name="label_bloom_number">BLOOM NUMBER</string>
+    <string name="label_harvest">HARVEST</string>
+    <string name="label_points_session">POINTS THIS SESSION</string>
+
+    <string name="goal_value">%1$d / %2$d BLOOMS</string>
+    <string name="goal_percent">%1$d%%</string>
+    <string name="goal_delta">+%1$d BLOOMS TODAY</string>
+
+    <string name="game_combo">COMBO x%1$s</string>
+    <string name="game_reshuffle">NEW SPROUTS</string>
+    <string name="game_seconds">%1$ds</string>
+
+    <string name="result_replay">PLAY AGAIN</string>
+    <string name="result_menu">MENU</string>
+    <string name="result_hint">Your garden keeps everything locally on this device.</string>
+
+    <string name="dialog_rules_title">GARDEN RULES</string>
+    <string name="dialog_rules_1">1. The header shows the bloom number for this session.</string>
+    <string name="dialog_rules_2">2. Tap two seed tiles whose numbers add up to it.</string>
+    <string name="dialog_rules_3">3. Matched pairs bloom and raise your combo multiplier.</string>
+    <string name="dialog_rules_4">4. The session ends when the clock reaches zero.</string>
+    <string name="dialog_rules_ok">GOT IT</string>
+
+    <string name="dialog_history_title">HISTORY</string>
+    <string name="dialog_history_empty">No sessions yet - plant your first garden</string>
+    <string name="dialog_history_close">CLOSE</string>
+    <string name="history_row_score">%1$d pts</string>
+    <string name="history_row_detail">%1$d blooms  ·  %2$d%% accuracy</string>
+
+    <string name="dialog_settings_title">SETTINGS</string>
+    <string name="settings_bloom_number">BLOOM NUMBER</string>
+    <string name="settings_session_length">SESSION LENGTH</string>
+    <string name="settings_daily_goal">DAILY GOAL</string>
+    <string name="settings_reduced_motion">REDUCED MOTION</string>
+    <string name="settings_gardener_name">GARDENER NAME</string>
+    <string name="settings_save">SAVE</string>
+    <string name="settings_target_10">10</string>
+    <string name="settings_target_12">12</string>
+    <string name="settings_target_15">15</string>
+    <string name="settings_len_45">45s</string>
+    <string name="settings_len_75">75s</string>
+    <string name="settings_len_120">120s</string>
+    <string name="settings_goal_8">8</string>
+    <string name="settings_goal_12">12</string>
+    <string name="settings_goal_20">20</string>
+
+    <string name="dialog_pause_title">PAUSED</string>
+    <string name="dialog_pause_resume">RESUME</string>
+    <string name="dialog_pause_quit">QUIT TO MENU</string>
+
+    <string name="cd_logo">Number Garden emblem</string>
+    <string name="cd_pause">Pause the session</string>
+    <string name="cd_background">Garden paper background</string>
+    <string name="cd_tile">Tile %1$d</string>
+    <string name="cd_plant">Blooming plant</string>
+    <string name="cd_goal_progress">Daily goal progress</string>
+    <string name="a11y_goal_state">%1$d of %2$d blooms grown today</string>
+    <string name="a11y_tile_empty">empty</string>
+    <string name="a11y_tile_selected">selected</string>
+    <string name="a11y_tile_bloomed">bloomed</string>
+    <string name="a11y_stat">%1$s %2$s</string>
+    <string name="a11y_target">Bloom number %1$d</string>
+    <string name="a11y_toggle_state">selected %1$s</string>
+</resources>

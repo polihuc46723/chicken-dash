@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/game_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/surface_white">
+
+    <ImageView
+        android:id="@+id/game_bg"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:alpha="0.5"
+        android:contentDescription="@string/cd_background"
+        android:scaleType="centerCrop"
+        android:src="@drawable/bg_game"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/game_overlay"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/overlay_game"
+        android:importantForAccessibility="no"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/game_header"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/surface_header"
+        android:elevation="2dp"
+        android:gravity="center_vertical"
+        android:minHeight="@dimen/header_height"
+        android:orientation="horizontal"
+        android:paddingStart="12dp"
+        android:paddingTop="@dimen/header_padding_top"
+        android:paddingEnd="12dp"
+        android:paddingBottom="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageButton
+            android:id="@+id/game_pause"
+            android:layout_width="@dimen/touch_min"
+            android:layout_height="@dimen/touch_min"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="@string/cd_pause"
+            android:padding="10dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/icon_pause" />
+
+        <LinearLayout
+            android:id="@+id/game_target_block"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:accessibilityLiveRegion="polite"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/game_target_caption"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/label_bloom_number"
+                android:textAppearance="@style/TextAppearance.App.Label"
+                android:textSize="10sp" />
+
+            <TextView
+                android:id="@+id/game_target_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/primary_blue"
+                android:textSize="30sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <com.Kelzuni2.Vorqet.core.ui.StatCardView
+            android:id="@+id/game_timer"
+            android:layout_width="84dp"
+            android:layout_height="wrap_content"
+            app:appAccent="@color/primary_blue"
+            app:appCompact="true"
+            app:appLabel="@string/label_time" />
+
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/game_area"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@id/game_controls"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/game_header">
+
+        <View
+            android:id="@+id/game_blob"
+            android:layout_width="360dp"
+            android:layout_height="360dp"
+            android:layout_gravity="center"
+            android:background="@drawable/blob_board"
+            android:importantForAccessibility="no" />
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/game_board"
+            style="@style/Widget.App.Card"
+            android:layout_width="@dimen/board_width"
+            android:layout_height="@dimen/board_height"
+            android:layout_gravity="center"
+            app:contentPadding="@dimen/board_padding">
+
+            <GridLayout
+                android:id="@+id/game_grid"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:columnCount="4"
+                android:rowCount="5" />
+
+        </com.google.android.material.card.MaterialCardView>
+
+    </FrameLayout>
+
+    <LinearLayout
+        android:id="@+id/game_controls"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/surface_controls"
+        android:elevation="6dp"
+        android:orientation="vertical"
+        android:paddingStart="@dimen/controls_padding"
+        android:paddingTop="@dimen/controls_padding"
+        android:paddingEnd="@dimen/controls_padding"
+        android:paddingBottom="@dimen/gap_xlarge"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <LinearLayout
+            android:id="@+id/game_combo_strip"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/game_combo"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:background="@drawable/chip_soft"
+                android:gravity="center"
+                android:minWidth="104dp"
+                android:paddingStart="14dp"
+                android:paddingEnd="14dp"
+                android:textColor="@color/primary_blue"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <com.google.android.material.progressindicator.LinearProgressIndicator
+                android:id="@+id/game_time_bar"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="14dp"
+                android:layout_weight="1"
+                android:max="100"
+                android:progress="100"
+                app:indicatorColor="@color/accent_mint"
+                app:trackColor="@color/field_cool"
+                app:trackCornerRadius="3dp"
+                app:trackThickness="6dp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/game_stat_row"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:orientation="horizontal">
+
+            <com.Kelzuni2.Vorqet.core.ui.StatCardView
+                android:id="@+id/game_stat_blooms"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/gap_tiny"
+                android:layout_weight="1"
+                app:appAccent="@color/accent_mint"
+                app:appCompact="true"
+                app:appLabel="@string/label_blooms" />
+
+            <com.Kelzuni2.Vorqet.core.ui.StatCardView
+                android:id="@+id/game_stat_pair"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/gap_tiny"
+                android:layout_marginEnd="@dimen/gap_tiny"
+                android:layout_weight="1"
+                app:appAccent="@color/primary_blue"
+                app:appCompact="true"
+                app:appLabel="@string/label_best_pair" />
+
+            <com.Kelzuni2.Vorqet.core.ui.StatCardView
+                android:id="@+id/game_stat_accuracy"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/gap_tiny"
+                android:layout_weight="1"
+                app:appAccent="@color/state_coral"
+                app:appCompact="true"
+                app:appLabel="@string/label_accuracy" />
+
+        </LinearLayout>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/game_reshuffle"
+            style="@style/Widget.App.Button.Secondary"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/secondary_height"
+            android:layout_marginTop="12dp"
+            android:insetTop="0dp"
+            android:insetBottom="0dp"
+            android:text="@string/game_reshuffle"
+            app:icon="@drawable/ic_refresh" />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

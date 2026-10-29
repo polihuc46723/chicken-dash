@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/rules_root"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="@dimen/screen_margin">
+
+    <LinearLayout
+        android:id="@+id/rules_card"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/surface_dialog"
+        android:orientation="vertical"
+        android:padding="@dimen/dialog_padding">
+
+        <TextView
+            android:id="@+id/rules_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/dialog_rules_title"
+            android:textAppearance="@style/TextAppearance.App.Title" />
+
+        <TextView
+            android:id="@+id/rules_line_1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@string/dialog_rules_1"
+            android:textAppearance="@style/TextAppearance.App.Body" />
+
+        <TextView
+            android:id="@+id/rules_line_2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="@string/dialog_rules_2"
+            android:textAppearance="@style/TextAppearance.App.Body" />
+
+        <TextView
+            android:id="@+id/rules_line_3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="@string/dialog_rules_3"
+            android:textAppearance="@style/TextAppearance.App.Body" />
+
+        <TextView
+            android:id="@+id/rules_line_4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="@string/dialog_rules_4"
+            android:textAppearance="@style/TextAppearance.App.Body" />
+
+        <TextView
+            android:id="@+id/rules_tip"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/chip_soft"
+            android:padding="12dp"
+            android:textAppearance="@style/TextAppearance.App.Body"
+            android:textColor="@color/primary_blue"
+            android:textSize="13sp" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/rules_ok"
+            style="@style/Widget.App.Button.Secondary"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/secondary_height"
+            android:layout_marginTop="18dp"
+            android:insetTop="0dp"
+            android:insetBottom="0dp"
+            android:text="@string/dialog_rules_ok"
+            app:icon="@drawable/ic_check" />
+
+    </LinearLayout>
+
+</RelativeLayout>

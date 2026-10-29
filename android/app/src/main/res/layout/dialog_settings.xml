@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/settings_root"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="@dimen/screen_margin">
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/settings_scroll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/surface_dialog">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="@dimen/dialog_padding">
+
+            <TextView
+                android:id="@+id/settings_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/dialog_settings_title"
+                android:textAppearance="@style/TextAppearance.App.Title" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="18dp"
+                android:text="@string/settings_bloom_number"
+                android:textAppearance="@style/TextAppearance.App.Label" />
+
+            <com.google.android.material.button.MaterialButtonToggleGroup
+                android:id="@+id/settings_target_group"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                app:selectionRequired="true"
+                app:singleSelection="true">
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/settings_target_10"
+                    style="@style/Widget.App.Button.Toggle"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/touch_min"
+                    android:layout_weight="1"
+                    android:text="@string/settings_target_10" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/settings_target_12"
+                    style="@style/Widget.App.Button.Toggle"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/touch_min"
+                    android:layout_weight="1"
+                    android:text="@string/settings_target_12" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/settings_target_15"
+                    style="@style/Widget.App.Button.Toggle"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/touch_min"
+                    android:layout_weight="1"
+                    android:text="@string/settings_target_15" />
+
+            </com.google.android.material.button.MaterialButtonToggleGroup>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="18dp"
+                android:text="@string/settings_session_length"
+                android:textAppearance="@style/TextAppearance.App.Label" />
+
+            <com.google.android.material.button.MaterialButtonToggleGroup
+                android:id="@+id/settings_length_group"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                app:selectionRequired="true"
+                app:singleSelection="true">
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/settings_len_45"
+                    style="@style/Widget.App.Button.Toggle"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/touch_min"
+                    android:layout_weight="1"
+                    android:text="@string/settings_len_45" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/settings_len_75"
+                    style="@style/Widget.App.Button.Toggle"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/touch_min"
+                    android:layout_weight="1"
+                    android:text="@string/settings_len_75" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/settings_len_120"
+                    style="@style/Widget.App.Button.Toggle"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/touch_min"
+                    android:layout_weight="1"
+                    android:text="@string/settings_len_120" />
+
+            </com.google.android.material.button.MaterialButtonToggleGroup>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="18dp"
+                android:text="@string/settings_daily_goal"
+                android:textAppearance="@style/TextAppearance.App.Label" />
+
+            <com.google.android.material.button.MaterialButtonToggleGroup
+                android:id="@+id/settings_goal_group"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                app:selectionRequired="true"
+                app:singleSelection="true">
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/settings_goal_8"
+                    style="@style/Widget.App.Button.Toggle"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/touch_min"
+                    android:layout_weight="1"
+                    android:text="@string/settings_goal_8" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/settings_goal_12"
+                    style="@style/Widget.App.Button.Toggle"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/touch_min"
+                    android:layout_weight="1"
+                    android:text="@string/settings_goal_12" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/settings_goal_20"
+                    style="@style/Widget.App.Button.Toggle"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/touch_min"
+                    android:layout_weight="1"
+                    android:text="@string/settings_goal_20" />
+
+            </com.google.android.material.button.MaterialButtonToggleGroup>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/settings_name_layout"
+                style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="18dp"
+                android:hint="@string/settings_gardener_name">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/settings_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPersonName"
+                    android:maxLength="16"
+                    android:singleLine="true" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <LinearLayout
+                android:id="@+id/settings_motion_row"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:gravity="center_vertical"
+                android:minHeight="@dimen/touch_min"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/settings_reduced_motion"
+                    android:textAppearance="@style/TextAppearance.App.Label" />
+
+                <com.google.android.material.materialswitch.MaterialSwitch
+                    android:id="@+id/settings_motion"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/touch_min"
+                    android:contentDescription="@string/settings_reduced_motion" />
+
+            </LinearLayout>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/settings_save"
+                style="@style/Widget.App.Button.Secondary"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/secondary_height"
+                android:layout_marginTop="20dp"
+                android:insetTop="0dp"
+                android:insetBottom="0dp"
+                android:text="@string/settings_save"
+                app:icon="@drawable/ic_check" />
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</RelativeLayout>

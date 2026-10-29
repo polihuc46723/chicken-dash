@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <FrameLayout
+        android:id="@+id/tile_face"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/tile_face_idle">
+
+        <TextView
+            android:id="@+id/tile_number"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="@string/settings_goal_8"
+            android:textColor="@color/ink_primary"
+            android:textSize="28sp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/tile_sprite"
+            android:layout_width="@dimen/tile_sprite"
+            android:layout_height="@dimen/tile_sprite"
+            android:layout_gravity="center"
+            android:alpha="0"
+            android:contentDescription="@string/cd_plant"
+            android:scaleType="fitCenter"
+            android:src="@drawable/sprite_1"
+            android:visibility="gone" />
+
+    </FrameLayout>
+
+</merge>

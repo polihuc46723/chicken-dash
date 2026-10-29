@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="StatCardView">
+        <attr name="appValue" format="string" />
+        <attr name="appLabel" format="string" />
+        <attr name="appAccent" format="color" />
+        <attr name="appCompact" format="boolean" />
+    </declare-styleable>
+    <declare-styleable name="NumberTileView">
+        <attr name="appNumber" format="integer" />
+    </declare-styleable>
+    <declare-styleable name="GoalProgressView">
+        <attr name="appGoal" format="integer" />
+        <attr name="appDone" format="integer" />
+    </declare-styleable>
+</resources>
